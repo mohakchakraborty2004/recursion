@@ -1,0 +1,11 @@
+vector<string> printNTimes(int n) {
+	string val="Coding Ninjas";
+  if (n == 1) {
+                return {val};
+        }
+	else{
+		vector<string> v(printNTimes(n-1));
+		v.emplace_back(val);
+		return v;
+	}
+}
